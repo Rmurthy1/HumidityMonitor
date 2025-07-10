@@ -6,11 +6,15 @@
 const int uploadDelay = 60000; // delay in ms between uploads to ThingSpeak
 unsigned long lastUploadTime = 0; // last time data was uploaded to ThingSpeak
 
+int humidity = 0; // variable to store humidity data
+int temperature = 0; // variable to store temperature data
+
 // wifi
 WiFiClient client;
 
 // put function declarations here:
 void uploadData();
+void queryAHT10();
 
 void setup() {
   // put your setup code here, to run once:
@@ -20,6 +24,11 @@ void setup() {
 }
 void loop() {
   // put your main code here, to run repeatedly:
+}
+
+void queryAHT10() {
+  // Code to query the AHT10 sensor
+
 }
 
 void uploadData(int temp, int humidity) {
